@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEE 207: Statics - The Art of Staying Still</title>
+    <style>
+        /* CSS Styling (Same as Page 1 for consistency) */
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #00509e;
+            --accent-color: #ff9900;
+            --text-color: #333333;
+            --bg-color: #f4f7f6;
+            --white: #ffffff;
+            --success: #28a745;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { margin: 5px 0 0 0; font-size: 1.2rem; color: #d1e0e8; }
+
+        nav {
+            background-color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .intro-box {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 5px solid var(--success);
+            margin-bottom: 30px;
+        }
+
+        .intro-box h2 { color: var(--success); margin-top: 0; }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .card h3 { margin-top: 0; color: var(--secondary-color); }
+
+        .hint {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .note-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95em;
+        }
+
+        ul.outline-list {
+            list-style-type: square;
+            padding-left: 20px;
+            color: #555;
+        }
+
+        ul.outline-list li { padding: 4px 0; }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .creator-tag { font-size: 1.1rem; font-weight: bold; color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { margin: 5px 0; width: 80%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MEE 207: Applied Mechanics</h1>
+        <p>The Ultimate Survival Guide & Resource Hub</p>
+    </header>
+
+    <nav>
+   <nav>
+        <a href="index.html">1. Intro & Expectations</a>
+        <a href="statics.html" class="active">2. Statics</a>
+        <a href="dynamics.html">3. Dynamics</a>
+        <a href="past-questions.html">4. Past Questions Tracker</a>
+    </nav>
+    <div class="container">
+        <div class="intro-box">
+            <h2>Part I: Statics (Equilibrium is Everything)</h2>
+            <p><strong>The Golden Rule of Statics:</strong> For any body to be in equilibrium, the sum of all forces must be zero (∑F = 0), and the sum of all moments must be zero (∑M = 0). If it accelerates or spins, you've crossed over into Dynamics!</p>
+        </div>
+
+        <h2 class="section-title">Deep Dive: The Course Outline</h2>
+        
+        <div class="grid-2">
+            <div class="card">
+                <span class="hint">THE FOUNDATION</span>
+                <h3>2.0 Vector Representation</h3>
+                <p>You can't solve mechanics without breaking forces down. This section is all about turning diagonal arrows into manageable X and Y components.</p>
+                <ul class="outline-list">
+                    <li>2.1-2.4 Force, Vector Presentation, Resultant and Resolution</li>
+                    <li>2.5-2.6 Moment of a Force & Couples</li>
+                    <li>2.7 Addition of Forces (Rectangular Coordinates)</li>
+                    <li>2.8 Equilibrium of a Particle</li>
+                    <li>2.9 Forces in Space (3D vectors)</li>
+                </ul>
+                <div class="note-box">
+                    <strong>O'yemi's Analogy:</strong> Think of resolving vectors like giving someone directions. Instead of saying "Walk 50 meters Northeast," you say "Walk 35 meters North, then 35 meters East." That's all Fx = Fcos(θ) and Fy = Fsin(θ) really is!
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="hint">ADVANCED TRICKS</span>
+                <h3>3.0 Virtual Work</h3>
+                <p>Instead of drawing a million forces, Virtual Work asks: "If I imagine this structure moving by a tiny, microscopic amount, how much work would the active forces do?"</p>
+                <ul class="outline-list">
+                    <li>3.1-3.2 Work of a Force and a Couple</li>
+                    <li>3.3-3.4 Principle of Virtual Work & Applications</li>
+                    <li>3.5-3.6 Potential Energy & Equilibrium</li>
+                    <li>3.7 Stability of Equilibrium</li>
+                </ul>
+                <div class="note-box">
+                    <strong>O'yemi's Note:</strong> The examiner loves testing Virtual Work on toggle mechanisms or interconnected beams. Remember: The total virtual work done by external active forces is zero (δU = 0).
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="hint">HIGH PROBABILITY</span>
+                <h3>4.0 Centroid & Centers of Gravity</h3>
+                <p>Finding the exact geometric center of weird shapes. This is guaranteed to be in your exam, usually as a composite shape with a hole cut out of it.</p>
+                <ul class="outline-list">
+                    <li>4.1 Center of Gravity of a 2D Body</li>
+                    <li>4.2 Centroids of Area and Line</li>
+                    <li>4.3 Determination of Centroid by Integration</li>
+                </ul>
+                <div class="note-box">
+                    <strong>O'yemi's Hint:</strong> For composite shapes, use a table: [Shape | Area (A) | x̄ | ȳ | Ax̄ | Aȳ]. Treat cut-out holes (like circles) as NEGATIVE areas!
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="hint">GUARANTEED QUESTION</span>
+                <h3>5.0 Simple Structures</h3>
+                <p>Analyzing the "skeleton" of engineering. This is where you calculate the tension or compression inside the beams of a bridge or roof.</p>
+                <ul class="outline-list">
+                    <li>5.1 Introduction</li>
+                    <li>5.2 Trusses</li>
+                    <li>5.3 Frames and Machines</li>
+                </ul>
+                <div class="note-box">
+                    <strong>O'yemi's Exam Hack:</strong> For Trusses, they almost always ask if it's "Perfect or Redundant". Just write <strong>m = 2j - 3</strong> (where m = members, j = joints). If m equals 2j - 3, it's perfect! Then, use the Method of Joints to find the internal forces.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Built to help us conquer Applied Mechanics.</p>
+        <p class="creator-tag">Curated by: Abideen Yakub Opeyemi (O'yemi)</p>
+        <p>📞 Contact/WhatsApp: 07050376975</p>
+    </footer>
+
+</body>
+</html>
