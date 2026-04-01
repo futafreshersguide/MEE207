@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEE 207: Applied Mechanics - Introduction</title>
+    <style>
+        /* CSS Styling */
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #00509e;
+            --accent-color: #ff9900;
+            --text-color: #333333;
+            --bg-color: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1.2rem;
+            color: #d1e0e8;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+
+        .analogy-box {
+            background-color: #e6f2ff;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .hint {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ul.outline-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul.outline-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .creator-tag {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+                width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MEE 207: Applied Mechanics</h1>
+        <p>The Ultimate Survival Guide & Resource Hub</p>
+    </header>
+
+   <nav>
+        <a href="index.html" class="active">1. Intro & Expectations</a>
+        <a href="statics.html">2. Statics</a>
+        <a href="dynamics.html">3. Dynamics</a>
+        <a href="past-questions.html">4. Past Questions Tracker</a>
+    </nav>
+
+    <div class="container">
+        <p class="intro-text">
+            Welcome to MEE 207! If you've ever looked at a bridge and wondered why it doesn't collapse under the weight of a hundred trailers, or looked at a car engine and wondered how the pistons perfectly time their movements—you are in the right place. Applied Mechanics takes the abstract physics from your first year and grounds it in absolute reality.
+        </p>
+
+        <h2 class="section-title">Course Roadmap: What Are We Studying?</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Part I: Statics (The Art of Staying Still)</h3>
+                <p>Statics is all about bodies at rest or moving at a constant velocity. The forces are fighting, but the net result is zero.</p>
+                <ul class="outline-list">
+                    <li><strong>1.0 Introduction:</strong> Concepts, Principles, and Free Body Diagrams</li>
+                    <li><strong>2.0 Vector Representation:</strong> Forces, Moments, Couples, and Equilibrium</li>
+                    <li><strong>3.0 Virtual Work:</strong> Work of a force, Potential Energy, and Stability</li>
+                    <li><strong>4.0 Centroid & Centers of Gravity:</strong> 2D bodies, Integration techniques</li>
+                    <li><strong>5.0 Simple Structures:</strong> Trusses, Frames, and Machines</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Part II: Dynamics (The Science of Motion)</h3>
+                <p>Dynamics is where things get moving. It's the study of bodies in motion and the forces that cause that motion.</p>
+                <ul class="outline-list">
+                    <li><strong>1.0 Introduction:</strong> Newton's Laws and Gravitation</li>
+                    <li><strong>2.0 Kinematics of Particle:</strong> Rectilinear and Plane Curvilinear Motion</li>
+                    <li><strong>3.0 Kinetics of Particles:</strong> Force, Mass, Acceleration, and Equations of Motion</li>
+                    <li><strong>4.0 Work and Energy:</strong> Work, Energy, and Power</li>
+                    <li><strong>5.0 Impulse and Momentum:</strong> Linear and Angular Momentum</li>
+                    <li><strong>6.0 Velocity in Simple Mechanisms:</strong> Relative velocity and Sliding Blocks</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title">Mental Models & Analogies</h2>
+        
+        <div class="analogy-box">
+            <strong>💡 The "Tug-of-War" Analogy for Statics:</strong><br>
+            Imagine a massive game of tug-of-war where both sides are pulling with exactly 5,000 Newtons of force. The rope isn't moving, but it is under immense tension. That is <em>Statics</em>. The forces are actively fighting, but the net result is zero.
+        </div>
+
+        <div class="analogy-box">
+            <strong>💡 The "Rollercoaster" Analogy for Dynamics:</strong><br>
+            When a rollercoaster sits at the very top of a drop, it has high Potential Energy and zero Kinetic Energy. When it drops, gravity accelerates it, and the tracks exert a normal force to keep it from flying away. Tracking those exact changes second-by-second is <em>Dynamics</em>.
+        </div>
+
+        <h2 class="section-title">General Expectations & Survival Tips</h2>
+        <div class="grid-2">
+            <div class="card">
+                <span class="hint">CRITICAL HINT</span>
+                <h3>1. The FBD is Your Best Friend</h3>
+                <p>You cannot solve a mechanics problem if you cannot see the forces. Before you write down a single equation, isolate the object and draw arrows for <em>every single force</em> acting on it. <strong>An FBD is worth 50% of the solution.</strong></p>
+            </div>
+            <div class="card">
+                <span class="hint">NOTE</span>
+                <h3>2. Master Your Units</h3>
+                <p>Answers without units are just random numbers. Always ensure you are working in consistent SI units. If you multiply mass (kg) by acceleration (m/s<sup>2</sup>), you get kg·m/s<sup>2</sup>, which is a Newton (N).</p>
+            </div>
+            <div class="card">
+                <span class="hint">NOTE</span>
+                <h3>3. Respect the Math</h3>
+                <p>Applied mechanics relies heavily on trigonometry (SOH CAH TOA is your daily bread), resolving vectors into X and Y components, and basic calculus for Centroids and Kinematics. Brush up on these immediately.</p>
+            </div>
+            <div class="card">
+                <span class="hint">PRO TIP</span>
+                <h3>4. Practice Over Reading</h3>
+                <p>Reading a textbook on mechanics is like reading a textbook on how to ride a bicycle. You won't learn until you actually try it. You must solve problems with a pen, paper, and calculator. See Page 4 for past questions!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Built to help us conquer Applied Mechanics.</p>
+        <p class="creator-tag">Curated by: Abideen Yakub Opeyemi (O'yemi)</p>
+        <p>📞 Contact/WhatsApp: 07050376975</p>
+    </footer>
+
+</body>
+</html>
