@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEE 207: Past Questions Tracker</title>
+    <style>
+        /* CSS Styling (Consistent with previous pages) */
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #00509e;
+            --accent-color: #ff9900;
+            --text-color: #333333;
+            --bg-color: #f4f7f6;
+            --white: #ffffff;
+            --highlight: #e83e8c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { margin: 5px 0 0 0; font-size: 1.2rem; color: #d1e0e8; }
+
+        nav {
+            background-color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .intro-box {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 5px solid var(--highlight);
+            margin-bottom: 30px;
+        }
+
+        .intro-box h2 { color: var(--highlight); margin-top: 0; }
+
+        .pq-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-left: 6px solid var(--primary-color);
+        }
+
+        .pq-card h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .frequency-tag {
+            display: inline-block;
+            background-color: var(--danger, #dc3545);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .high { background-color: #dc3545; } /* Red for very high freq */
+        .med { background-color: #ffc107; color: #333; } /* Yellow for medium */
+
+        .question-text {
+            font-style: italic;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        .solution-steps {
+            background-color: #e6f2ff;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .solution-steps h4 { margin-top: 0; color: var(--primary-color); }
+
+        .note-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95em;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .creator-tag { font-size: 1.1rem; font-weight: bold; color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; align-items: center; }
+            nav a { margin: 5px 0; width: 80%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MEE 207: Applied Mechanics</h1>
+        <p>The Ultimate Survival Guide & Resource Hub</p>
+    </header>
+
+   <nav>
+        <a href="index.html">1. Intro & Expectations</a>
+        <a href="statics.html">2. Statics</a>
+        <a href="dynamics.html">3. Dynamics</a>
+        <a href="past-questions.html" class="active">4. Past Questions Tracker</a>
+    </nav>
+
+    <div class="container">
+        <div class="intro-box">
+            <h2>The Exam Goldmine: Reoccurring Questions</h2>
+            <p>If you master the four categories of questions below, you are practically guaranteed to pass. The examiners love these specific setups, often repeating them year after year with only slight modifications to the numbers.</p>
+        </div>
+
+        <div class="pq-card">
+            <span class="frequency-tag high">APPEARS ALMOST EVERY YEAR</span>
+            <h3>1. The 2kg & 4kg Direct Impact (Impulse & Momentum)</h3>
+            
+            <div class="question-text">
+                "A ball of mass 2 kg moving with a velocity of 3 m/s impinges directly on a ball of mass 4 kg at rest[cite: 22, 36, 64]. After impact, the 2 kg mass ball comes to rest[cite: 23, 37, 65]. Determine the velocity of 4 kg ball after striking and the coefficient of restitution between the two balls[cite: 23, 38, 66]."
+            </div>
+            
+            <div class="solution-steps">
+                <h4>Solution Framework:</h4>
+                <ol>
+                    <li><strong>Conservation of Momentum:</strong> m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂</li>
+                    <li>Plug in: (2)(3) + (4)(0) = (2)(0) + 4v₂</li>
+                    <li>Solve for v₂: 6 = 4v₂ ➔ <strong>v₂ = 1.5 m/s</strong></li>
+                    <li><strong>Coefficient of Restitution (e):</strong> e = (v₂ - v₁) / (u₁ - u₂)</li>
+                    <li>Plug in: e = (1.5 - 0) / (3 - 0) ➔ <strong>e = 0.5</strong></li>
+                </ol>
+            </div>
+            <div class="note-box">
+                <strong>O'yemi's Hint:</strong> This is free marks! Just remember that "at rest" means initial velocity (u₂) is 0, and "comes to rest" means final velocity (v₁) is 0. Don't swap your ones and twos when calculating 'e'!
+            </div>
+        </div>
+
+        <div class="pq-card">
+            <span class="frequency-tag high">APPEARS ALMOST EVERY YEAR</span>
+            <h3>2. The Inclined Plane (Work, Energy & Friction)</h3>
+            
+            <div class="question-text">
+                "A body of mass 30 kg is projected up an inclined plane of slope 30° with an initial velocity of 18 m/s[cite: 31, 50, 76]. There is a frictional resistance to motion of 35 N[cite: 31, 50, 77]. Determine: (i) how far the body will travel along the plane, (ii) the percentage of energy lost to friction. If the body falls freely from its maximum position, (iii) what will be its kinetic energy as it touches the ground? [cite: 32, 51, 52, 78, 79]"
+            </div>
+            
+            <div class="solution-steps">
+                <h4>Solution Framework:</h4>
+                <ol>
+                    <li><strong>Find Acceleration:</strong> F_net = -(mg sinθ + F_friction). Use F = ma to find 'a' (it will be negative because it's slowing down).</li>
+                    <li><strong>Find Distance (s):</strong> Use v² = u² + 2as, where final velocity v = 0 at the peak.</li>
+                    <li><strong>Energy Lost:</strong> Initial KE = ½mu². Work done by friction = F_friction × s. Percentage = (Work / Initial KE) × 100.</li>
+                    <li><strong>Final KE on Return:</strong> It loses energy going UP and coming DOWN. Final KE = Initial KE - 2(Work done by friction).</li>
+                </ol>
+            </div>
+            <div class="note-box">
+                <strong>O'yemi's Analogy:</strong> Think of the block's initial kinetic energy like a bank account. Every meter it slides, friction charges a "tax." It pays the tax going up, and it pays the exact same tax coming back down!
+            </div>
+        </div>
+
+        <div class="pq-card">
+            <span class="frequency-tag high">HIGH PROBABILITY</span>
+            <h3>3. Equilibrium of Suspended Mass (Lami's Theorem)</h3>
+            
+            <div class="question-text">
+                "Two cables are tied together at point C and loaded as shown in Fig... Determine the tension T₁ and T₂ in AC and BC respectively. [cite: 49, 50, 59, 60, 79, 80]" (Usually a 260kg [cite: 46] or 25kg [cite: 12] mass hanging from the center).
+            </div>
+            
+            <div class="solution-steps">
+                <h4>Solution Framework:</h4>
+                <ol>
+                    <li><strong>Find the Angles:</strong> Use basic SOH CAH TOA (tanθ = Opp/Adj) using the distances given in the diagram to find the angles the cables make with the vertical.</li>
+                    <li><strong>Total Angles:</strong> Find the three total angles between the three forces (T₁, T₂, and Weight). They must add up to 360°!</li>
+                    <li><strong>Apply Lami's Theorem:</strong> T₁ / sin(Angle 1) = T₂ / sin(Angle 2) = W / sin(Angle 3).</li>
+                    <li><strong>Solve:</strong> Cross-multiply to find T₁ and T₂. Remember W = mass × 9.81!</li>
+                </ol>
+            </div>
+            <div class="note-box">
+                <strong>O'yemi's Hack:</strong> The 260kg version of this exact diagram repeated in 2019, 2020, and 2023. In 2024, they changed the mass to 25kg[cite: 12]! DO NOT memorize the final answers; master the SOH CAH TOA steps. Ensure your calculator is in DEGREES!
+            </div>
+        </div>
+
+        <div class="pq-card">
+            <span class="frequency-tag med">GUARANTEED TOPIC</span>
+            <h3>4. Perfect vs. Redundant Truss (Statics)</h3>
+            
+            <div class="question-text">
+                "A simple triangle truss supporting two loads is shown in Fig... Determine (i) whether the structure is perfect or redundant, (ii) the reactions and the forces in each of the members, (iii) state if the forces are tensile or compressive. [cite: 29, 30, 43, 54, 72]"
+            </div>
+            
+            <div class="solution-steps">
+                <h4>Solution Framework:</h4>
+                <ol>
+                    <li><strong>Test for Perfect Truss:</strong> Use the formula <strong>m = 2j - 3</strong>. Count the members (m) and joints (j). If the left side equals the right side, write "The structure is perfect."</li>
+                    <li><strong>Find Reactions:</strong> Take moments about the pin support (∑M = 0) to find the roller reaction. Then use ∑Fy = 0 to find the pin's vertical reaction.</li>
+                    <li><strong>Method of Joints:</strong> Start at a joint with only 2 unknown members. Use ∑Fx = 0 and ∑Fy = 0 to solve for internal forces.</li>
+                    <li><strong>State Tension/Compression:</strong> If your answer is positive (pulling away from joint), it's Tension. If negative (pushing into joint), it's Compression.</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Built to help us conquer Applied Mechanics.</p>
+        <p class="creator-tag">Curated by: Abideen Yakub Opeyemi (O'yemi)</p>
+        <p>📞 Contact/WhatsApp: 07050376975</p>
+    </footer>
+
+</body>
+</html>
